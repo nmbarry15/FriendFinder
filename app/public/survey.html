@@ -351,6 +351,7 @@
                 });
 
             $.get("/api/modal", function (friend) {
+                $("#image").empty();
                 $("#friendModal").modal();
                 $("#friendStatus").text("Your best match is " + friend.name);
                 $("#image").append($("<img class='img-thumbnail'>").attr("src", friend.photo));
